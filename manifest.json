@@ -1,0 +1,11 @@
+{
+    "name": "Simulador Gravedad",
+    "version": "1.0.0",
+    "description": "Simulador Gravedad",
+    "manifest_version": 3,
+    "author": "Lalo Lolo",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Simulador"
+    }
+}

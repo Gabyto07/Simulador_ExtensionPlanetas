@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="eS">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>SIMULADOR GRAVEDAD</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" /> 
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#!">SIMULADOR</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>     
+                </ul>
+                </div>   </div>
+        </nav>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-2 gx-lg-4 align-items-center my-5"> <div class="col-lg-3">
+                </div>  </div>
+            <div class="card text-white bg-secondary my-5 py-0 text-center">
+                    <h1>SELECCIONE LA GRAVEDAD DESEADA:</h1>
+                        <center>
+                            <label fro="altura">Altura a elegir en MT</label>
+                            <input type="number" id="altura">           
+                        </center>
+                    <button onclick="alturadeseada()">Guardar</button>
+            </div>
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-2 mb-5">  <div class="">
+                        <div class="card-body">
+                            <h2 class="card-title">GENERICO</h2>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                            onclick="ajustarDatos(0)">
+                            <img src="Imagenes/Imagen10.jpg" alt="img planeta generico" width="200px" height="200px">
+                        </div>      </div>
+                </div>
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-2 mb-5">  <div class="">
+                        <div class="card-body">
+                            <h2 class="card-title">TIERRA</h2>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                            onclick="ajustarDatos(1)">
+                            <img src="Imagenes/Imagen1.jfif" alt="img planeta tierra" width="200px" height="200px">
+                            <P>Gravedad Tierra: 9,807 m/s²</P>
+                        </div>      </div>
+                </div>
+                <div class="col-md-2 mb-5">
+                    <div class="">   <div class="">
+                            <h2 class="card-title">MARTE</h2>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                            onclick="ajustarDatos(2)">
+                            <img src="Imagenes/Imagen2.jfif" alt="img planeta tierra" width="200px" height="200px"> 
+                            <p>Gravedad Marte: 3,71 m/s²</p>                       </div>
+                    </div>   </div>
+                <div class="col-md-2 mb-5">
+                    <div class="">  <div class="">
+                            <h2 class="card-title">JUPITER</h2>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                            onclick="ajustarDatos(3)">
+                            <img src="Imagenes/Imagen3.jfif" alt="img planeta tierra" width="200px" height="200px">   
+                            <p>Gravedad Jupiter: 24,79 m/s²</p>
+                        </div>    </div>
+                        </div>
+                <div class="col-md-2 mb-5">
+                    <div class="">
+                        <div class="">
+                            <h2 class="card-title">SATURNO</h2>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                            onclick="ajustarDatos(4)">
+                            <img src="Imagenes/Imagen4.jfif" alt="img planeta tierra" width="200px" height="200px">
+                            <p>Gravedad Saturno: 10,44 m/s2</p>
+                        </div>  </div>
+                    </div>  
+                    <div class="col-md-2 mb-5">
+                        <div class="">   <div class="">
+                                <h2 class="card-title">VENUS</h2>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                                onclick="ajustarDatos(5)">
+                                <img src="Imagenes/Imagen6.jpg" alt="img planeta tierra" width="200px" height="200px"> 
+                                <p>Gravedad Venus: 8,87 m/s²</p>     </div>
+                        </div>   </div>
+                        <div class="col-md-2 mb-5">
+                            <div class="">   <div class="">
+                                    <h2 class="card-title">MERCURIO</h2>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                                    onclick="ajustarDatos(6)">
+                                    <img src="Imagenes/Imagen8.jpg" alt="img planeta tierra" width="200px" height="200px"> 
+                                    <p>Gravedad Mercurio: 3,7 m/s²</p>     </div>
+                            </div>   </div>
+                            <div class="col-md-2 mb-5">
+                            <div class="">   <div class="">
+                                <h2 class="card-title">NEPTUNO</h2>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                                onclick="ajustarDatos(7)">
+                                <img src="Imagenes/Imagen9.jfif" alt="img planeta tierra" width="200px" height="200px"> 
+                                <p>Gravedad Neptuno: 3,7 m/s²</p>     </div>
+                        </div>   </div>        
+                            <div class="col-md-2 mb-5">
+                                <div class="">   <div class="">
+                                        <h2 class="card-title">URANO</h2>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                                        onclick="ajustarDatos(8)">
+                                        <img src="Imagenes/Imagen7.jfif" alt="img planeta tierra" width="200px" height="200px"> 
+                                        <p>Gravedad Urano: 8,87 m/s²</p>     </div>
+                                </div>   </div>
+                        <div class="col-md-4 mb-5">
+                            <div class="">  <div class="">
+                                    <h2 class="card-title">LUNA</h2>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
+                                    onclick="ajustarDatos(9)">
+                                    <img src="Imagenes/Imagen5.jfif" alt="img planeta tierra" width="200px" height="200px">
+                                    <p>Gravedad luna: 1,62 m/s²</p>
+                                </div> </div>
+        </div>   </div>
+        <div class="modal fullscreen-modal fade" id="tierra" tabindex="-1" aria-labelledby="tierra" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" id="titulo">
+                        <h1 class="modal-title fs-5" id="tierra">Simulador de gravedad de </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="ocultar">
+                            <label>Altura en metros:</label>
+                            <input type="number" id="alturaGenerico"><br><br>
+                            <label>Gravedad: </label>
+                            <input type="number" id="gravedadGenerico"><br><br>
+                            <label>nombre del planeta: </label>
+                            <input type="text" id="nombre"><br><br>
+                            <button type="button" class="btn btn-primary" id="guardarGenerico">Guardar</button>
+                        </div>
+                        <div id="objeto">
+                            <center><img src="Imagenes/Fecha2.jpg" alt="img Fecha1" width="100px" height="100px"
+                                    onclick="simulador()"></center>
+                        </div> </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">MENU</button>
+                        <button type="button" class="btn btn-warning" onclick="reiniciar()">REINICIAR</button>
+                    </div>  </div>
+            </div>  </div>
+            <script src="js/bootstrap.js"></script>
+            <script src="js/jquery.js"></script>
+           <script src="js/scripts.js"></script>
+        <script src="js/functions.js"></script>
+    </body>
+</html>
